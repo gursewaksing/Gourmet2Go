@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gursewaksing/Gourmet2Go/issues"
   },
-  "homepage": "https://github.com/gursewaksing/Gourmet2Go#readme"
+  "homepage": "https://github.com/gursewaksing/Gourmet2Go#readme",
+  "dependencies": {
+    "mongoose": "^8.10.0"
+  }
 }
