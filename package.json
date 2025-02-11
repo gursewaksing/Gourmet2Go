@@ -1,0 +1,19 @@
+{
+  "name": "gourmet2go",
+  "version": "1.0.0",
+  "description": "gourmet2go",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gursewaksing/Gourmet2Go.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gursewaksing/Gourmet2Go/issues"
+  },
+  "homepage": "https://github.com/gursewaksing/Gourmet2Go#readme"
+}
