@@ -8,7 +8,7 @@ import OrderPage from "./pages/OrderPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <CartProvider> {/* Wrap the entire app with CartProvider */}
+    <CartProvider> {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -16,5 +16,6 @@ root.render(
           <Route path="/order" element={<OrderPage />} />
         </Routes>
       </BrowserRouter>
+      }
     </CartProvider>
 );
