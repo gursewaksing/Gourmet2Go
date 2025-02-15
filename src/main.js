@@ -8,7 +8,6 @@ import OrderPage from "./pages/OrderPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
     <CartProvider> {/* Wrap the entire app with CartProvider */}
       <BrowserRouter>
         <Routes>
@@ -18,5 +17,4 @@ root.render(
         </Routes>
       </BrowserRouter>
     </CartProvider>
-  </React.StrictMode>
 );
