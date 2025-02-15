@@ -7,7 +7,7 @@ import MenuPage from "./pages/MenuPage";
 import OrderPage from "./pages/OrderPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+root.createRoot(
     <React.StrictMode>
     <CartProvider> {
       <BrowserRouter>
