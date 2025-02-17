@@ -60,55 +60,55 @@ const MenuPage = () => {
   };
 
   return (
-    <div className="menu-page">
-      {/* Menu Section */}
-      <div className="menu-container">
-        <h1>Our Menu</h1>
-        {/* Grid layout for menu items */}
-        <div className="menu-list">
-          {menuItems.map((item) => (
-            <div key={item.id} className="menu-item">
-              <div className="menu-info">
-                <span className="food-name">{item.name}</span>
-                <span className="food-description">{item.description}</span>
-                <span className="food-price">${item.price.toFixed(2)}</span>
-              </div>
-              <button onClick={() => handleAddToCart(item)} className="add-btn">
-                Add to Order
-              </button>
-            </div>
-          ))}
+      <div className="menu-page">
+        {/* Menu Section */}
+        <div className="menu-container">
+          <h1>Our Menu</h1>
+          {/* Grid layout for menu items */}
+          <div className="menu-list">
+            {menuItems.map((item) => (
+                <div key={item.id} className="menu-item">
+                  <div className="menu-info">
+                    <span className="food-name">{item.name}</span>
+                    <span className="food-description">{item.description}</span>
+                    <span className="food-price">${item.price.toFixed(2)}</span>
+                  </div>
+                  <button onClick={() => handleAddToCart(item)} className="add-btn">
+                    Add to Order
+                  </button>
+                </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Cart Section (Fixed to the Right) */}
-      <div className="cart-sidebar">
-        <h2>🛒 Your Cart</h2>
-        {cart.length === 0 ? (
-          <p>Your cart is empty.</p>
-        ) : (
-          <div className="cart-items">
-            {cart.map((item, index) => (
-              <div key={index} className="cart-item">
+        {/* Cart Section (Fixed to the Right) */}
+        <div className="cart-sidebar">
+          <h2>🛒 Your Cart</h2>
+          {cart.length === 0 ? (
+              <p>Your cart is empty.</p>
+          ) : (
+              <div className="cart-items">
+                {cart.map((item, index) => (
+                    <div key={index} className="cart-item">
                 <span className="cart-item-name">
                   {item.name} (x{item.quantity})
                 </span>
-                <span className="cart-item-price">
+                      <span className="cart-item-price">
                   ${(item.price * item.quantity).toFixed(2)}
                 </span>
-                {/* Minus Button to remove/decrement item */}
-                <button className="minus-btn" onClick={() => handleRemoveOne(item.id)}>
-                  -
-                </button>
+                      {/* Minus Button */}
+                      <button className="minus-btn" onClick={() => handleRemoveOne(item.id)}>
+                        -
+                      </button>
+                    </div>
+                ))}
               </div>
-            ))}
-          </div>
-        )}
-        <button onClick={goToOrderPage} className="go-to-order-btn">
-          Go to Cart ({cart.length} items)
-        </button>
+          )}
+          <button onClick={goToOrderPage} className="go-to-order-btn">
+            Go to Cart ({cart.length} items)
+          </button>
+        </div>
       </div>
-    </div>
   );
 };
 
